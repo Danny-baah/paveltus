@@ -86,40 +86,17 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-4 flex flex-col items-start">
             {/* Logo */}
             <div className="flex flex-col items-start select-none">
-              <div className="flex flex-col items-start">
-                {/* Red Roof Icon with 4-square window */}
-                <svg
-                  viewBox="0 0 60 28"
-                  fill="none"
-                  className="w-12 h-6 mb-1"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 24L30 5L57 24"
-                    stroke="#DE1110"
-                    strokeWidth="3.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path d="M41 15V7H47V19" fill="#DE1110" />
-                  <rect x="26.5" y="11" width="3" height="3" fill="white" rx="0.5" />
-                  <rect x="31.2" y="11" width="3" height="3" fill="white" rx="0.5" />
-                  <rect x="26.5" y="15.5" width="3" height="3" fill="white" rx="0.5" />
-                  <rect x="31.2" y="15.5" width="3" height="3" fill="white" rx="0.5" />
-                </svg>
-                {/* Brand Wordmark */}
-                <div className="flex items-baseline space-x-1.5">
-                  <span className="font-extrabold tracking-tight text-white text-[22px] sm:text-2xl leading-none">
-                    PAVELTUS
-                  </span>
-                  <span className="font-normal text-white text-[15px] sm:text-base leading-none opacity-90">
-                    GmbH
-                  </span>
-                </div>
-              </div>
+              <a href="/" className="cursor-pointer mb-2" aria-label="Paveltus Startseite">
+                <img
+                  src="/paveltus-logo-white.png"
+                  alt="Paveltus GmbH"
+                  className="h-11 sm:h-12 w-auto object-contain"
+                  loading="lazy"
+                />
+              </a>
               {/* Red bar under logo */}
               <span
-                className="w-9 h-[3px] bg-[#DE1110] rounded-full mt-2.5 mb-4 inline-block"
+                className="w-9 h-[3px] bg-[#DE1110] rounded-full mt-1.5 mb-4 inline-block"
                 aria-hidden="true"
               />
             </div>
