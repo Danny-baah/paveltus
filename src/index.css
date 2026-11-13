@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #021861;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Subtle, high-end entrance animations */
+@keyframes heroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-hero-badge {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s backwards;
+}
+
+.animate-hero-headline {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s backwards;
+}
+
+.animate-hero-subheadline {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+}
+
+.animate-hero-desc {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s backwards;
+}
+
+.animate-hero-actions {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s backwards;
+}
+
+.animate-hero-indicators {
+  animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s backwards;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-badge,
+  .animate-hero-headline,
+  .animate-hero-subheadline,
+  .animate-hero-desc,
+  .animate-hero-actions,
+  .animate-hero-indicators {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" rx="6" fill="#021861"/>
+  <!-- Red Roof Accent with Chimney -->
+  <path d="M6 22L16 11L26 22" stroke="#DE1110" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 15.5V11H23V18.8" fill="#DE1110"/>
+</svg>
+
