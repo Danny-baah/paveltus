@@ -204,7 +204,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activePage = 'home' }) => {
         >
           {/* Logo */}
           <a href="/" className="cursor-pointer" aria-label="Paveltus Startseite">
-            <Logo />
+            <Logo imgClassName={scrolled ? 'h-[44px] sm:h-[48px] lg:h-[54px]' : 'h-[48px] sm:h-[56px] lg:h-[66px]'} />
           </a>
 
           {/* Desktop Navigation Links */}

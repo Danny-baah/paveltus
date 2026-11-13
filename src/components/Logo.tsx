@@ -2,10 +2,15 @@ import React from 'react';
 
 interface LogoProps {
   className?: string;
+  imgClassName?: string;
   variant?: 'light' | 'dark';
 }
 
-export const Logo: React.FC<LogoProps> = ({ className = '', variant = 'light' }) => {
+export const Logo: React.FC<LogoProps> = ({
+  className = '',
+  imgClassName = '',
+  variant = 'light',
+}) => {
   const logoSrc = variant === 'dark' ? '/paveltus-logo-orig.png' : '/paveltus-logo-white.png';
 
   return (
@@ -16,7 +21,9 @@ export const Logo: React.FC<LogoProps> = ({ className = '', variant = 'light' })
       <img
         src={logoSrc}
         alt="Paveltus GmbH"
-        className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        className={`w-auto object-contain transition-all duration-300 group-hover:scale-[1.02] ${
+          imgClassName || 'h-[46px] sm:h-[54px] lg:h-[64px]'
+        }`}
         loading="eager"
       />
     </div>
