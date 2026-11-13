@@ -66,17 +66,7 @@ export const Footer: React.FC = () => {
 
         {/* Left smooth fade to transparent */}
         <rect x="0" y="0" width="220" height="350" fill="url(#footerSkyFade)" />
-
-        {/* Vibrant Red Triangular Wedge at Bottom-Right Corner */}
-        <polygon points="500,240 500,350 400,350" fill="#DE1110" />
       </svg>
-
-      {/* Mobile Subtle Red Corner Accent */}
-      <div
-        className="lg:hidden absolute bottom-0 right-0 w-24 h-16 bg-[#DE1110] -z-0 pointer-events-none"
-        style={{ clipPath: 'polygon(100% 0, 100% 100%, 0 100%)' }}
-        aria-hidden="true"
-      />
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-12 xl:px-16">

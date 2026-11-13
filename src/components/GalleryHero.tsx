@@ -11,7 +11,7 @@ export const GalleryHero: React.FC = () => {
       <img
         src="/gallery_hero_bg.jpg"
         alt="Paveltus Galerie - Ausgewählte Renovierungs- und Sanierungsprojekte"
-        className="absolute inset-0 w-full h-full object-cover object-[right_center] pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
         loading="eager"
       />
 

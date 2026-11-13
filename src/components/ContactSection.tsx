@@ -79,16 +79,6 @@ export const ContactSection: React.FC = () => {
               aria-hidden="true"
             />
 
-            {/* Bottom-Right Red Corner Slice */}
-            <div
-              className="absolute bottom-0 right-0 w-24 h-24 pointer-events-none select-none"
-              aria-hidden="true"
-            >
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <polygon points="100,0 100,100 0,100" fill="#DE1110" />
-              </svg>
-            </div>
-
             {/* Contact Items List */}
             <div className="space-y-6 sm:space-y-7 relative z-10 my-auto">
               {/* Item 1: Adresse */}
@@ -351,7 +341,7 @@ export const ContactSection: React.FC = () => {
                     <span className="text-xs text-slate-600 leading-snug">
                       Ich habe die{' '}
                       <a
-                        href="#datenschutz"
+                        href="/datenschutz"
                         className="text-[#DE1110] font-semibold hover:underline"
                         onClick={(e) => e.stopPropagation()}
                       >
@@ -377,23 +367,27 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* ================= BOTTOM MAP CARD ================= */}
-        <div className="relative w-full rounded-[24px] overflow-hidden border border-slate-200/90 shadow-sm bg-[#E8ECEF] h-[260px] sm:h-[300px] lg:h-[340px]">
-          {/* Crisp Berlin Map Background Image with original location marker */}
-          <img
-            src="/contact_map_exact_2x.png"
-            alt="Paveltus Berlin Standort Karte"
-            className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
+        <div className="relative w-full rounded-[24px] overflow-hidden border border-slate-200/90 shadow-sm bg-[#E8ECEF] h-[320px] sm:h-[380px] lg:h-[420px] group">
+          {/* Real Interactive Google Maps Embed with Paveltus Berlin Address */}
+          <iframe
+            title="Paveltus GmbH Standort Berlin Google Maps"
+            src="https://maps.google.com/maps?q=Wollankstra%C3%9Fe%20126%20a-b%2C%2013187%20Berlin&z=15&hl=de&t=m&output=embed&iwloc=near"
+            className="w-full h-full border-0"
             loading="lazy"
+            allowFullScreen
           />
 
-          {/* Interactive Floating Link matching exact badge location */}
+          {/* Quick Route Planning Overlay Badge */}
           <a
-            href="https://maps.google.com/?q=Berlin,+Deutschland"
+            href="https://maps.google.com/?q=Wollankstra%C3%9Fe+126+a-b,+13187+Berlin"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="In Google Maps ansehen"
-            className="absolute top-4 left-4 sm:top-5 sm:left-5 z-20 w-[180px] sm:w-[220px] h-[70px] rounded-2xl cursor-pointer"
-          />
+            className="absolute top-4 left-4 z-10 hidden sm:flex items-center gap-2.5 px-4 py-2 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-xl shadow-md text-xs font-semibold text-[#021861] hover:text-[#DE1110] transition-colors"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#DE1110]" />
+            <span>Wollankstraße 126 a-b, 13187 Berlin</span>
+            <span className="text-slate-400 font-normal">| Route planen ↗</span>
+          </a>
         </div>
       </div>
     </section>
